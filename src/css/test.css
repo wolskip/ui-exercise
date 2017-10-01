@@ -20,6 +20,13 @@ body {
     height: 100vh;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 figure {
     flex: 1;
 }
@@ -145,6 +152,15 @@ header {
     color: #7cc576;
 }
 
+.main-nav li input {
+    background-color: aliceblue;
+    border: 0.5px solid lightgray;
+    margin-right: 1%;
+    padding: 5px 15px;
+    border-radius: 5px;
+    float: right;
+}
+
 
 /* Main section  */
 
@@ -165,6 +181,9 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     overflow: auto;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
 }
 
 .sidebar {
@@ -176,6 +195,9 @@ header {
     box-shadow: 0 4px 5px -3px #ececec;
     border-radius: 5px;
     background-color: aliceblue;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
 }
 
 footer {
