@@ -1,4 +1,4 @@
-/* css document */
+/* CSS document. */
 
 
 /* Primary styles */
@@ -20,27 +20,138 @@ body {
     height: 100vh;
 }
 
+figure {
+    flex: 1;
+}
+
+figcaption h2 {
+    font-family: "typo3-Normal";
+}
+
+figcaption h3 {
+    font-family: "Asap";
+    font-weight: normal;
+    color: gray;
+    /* max-width of the image */
+    max-width: 266px;
+}
+
+@font-face {
+    /* https://www.ffonts.net/typo3-Normal.font */
+    font-family: 'typo3-Normal';
+    src: url('../fonts/typo3-Normal.ttf.woff') format('woff'), url('../fonts/typo3-Normal.ttf.svg#typo3-Normal') format('svg'), url('../fonts/typo3-Normal.ttf.eot'), url('../fonts/typo3-Normal.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /* https://www.ffonts.net/Asap.font */
+    font-family: 'Asap';
+    src: url('../fonts/Asap.ttf.woff') format('woff'), url('../fonts/Asap.ttf.svg#Asap') format('svg'), url('../fonts/Asap.ttf.eot'), url('../fonts/Asap.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* Header */
 
-header {
-    height: 7%;
+.typewriter h1 {
+    overflow: hidden;
+    border-right: .15em solid #00FF44;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 }
 
-.wrapper {
-    /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-    flex: 1 0 auto;
+.typewriter h4 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation-delay: -3.5s;
+    animation: typing 3.5s steps(40, end);
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: #008318;
+    }
+}
+
+header {
+    height: 7%;
+    padding: 1%;
+    color: #1A1E1B;
+    background-image: url('https://3.bp.blogspot.com/-LtNJvk1b3Yg/UASA4Sy8Y1I/AAAAAAAACIg/EoqjhewR0x8/s1600/light_blue_background_pattern.jpg');
 }
 
 
 /* Navigation */
 
 .main-nav-outer {
-    height: 10%;
+    padding: 0px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 4px 5px -3px #ececec;
+    position: relative;
+    background: #fff;
+}
+
+.main-nav {
+    text-align: center;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav li {
+    display: inline;
+    margin: 0 1px;
+}
+
+.main-nav li a {
+    display: inline-block;
+    color: #222222;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    line-height: 20px;
+    margin: 0 3px;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.main-nav li a:hover {
+    text-decoration: none;
+    color: #7cc576;
 }
 
 
 /* Main section  */
+
+.wrapper {
+    /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    flex: 1 0 auto;
+}
 
 .main-section {
     width: 100vw;
@@ -49,19 +160,29 @@ header {
 
 .content {
     width: 70vw;
-    flex-direction: column;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
 }
 
 .sidebar {
     width: 30vw;
-    background-color: lightgray;
-    flex: 1;
+    margin: 1% 0;
+    align-self: center;
+    border: 1px solid #dddddd;
+    border-right: 0;
+    box-shadow: 0 4px 5px -3px #ececec;
+    border-radius: 5px;
+    background-color: aliceblue;
 }
 
 footer {
     /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
     flex-shrink: 0;
-    background-color: darkgray;
     text-align: right;
     font-size: smaller;
+    padding: 1%;
+    background-image: url('https://3.bp.blogspot.com/-LtNJvk1b3Yg/UASA4Sy8Y1I/AAAAAAAACIg/EoqjhewR0x8/s1600/light_blue_background_pattern.jpg');
 }
