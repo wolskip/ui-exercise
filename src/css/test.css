@@ -1,0 +1,67 @@
+/* css document */
+
+
+/* Primary styles */
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* Avoid the IE 10-11 `min-height` bug. */
+    height: 100vh;
+}
+
+
+/* Header */
+
+header {
+    height: 7%;
+}
+
+.wrapper {
+    /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    flex: 1 0 auto;
+}
+
+
+/* Navigation */
+
+.main-nav-outer {
+    height: 10%;
+}
+
+
+/* Main section  */
+
+.main-section {
+    width: 100vw;
+    display: flex;
+}
+
+.content {
+    width: 70vw;
+    flex-direction: column;
+}
+
+.sidebar {
+    width: 30vw;
+    background-color: lightgray;
+    flex: 1;
+}
+
+footer {
+    /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    flex-shrink: 0;
+    background-color: darkgray;
+    text-align: right;
+    font-size: smaller;
+}
